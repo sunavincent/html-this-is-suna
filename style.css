@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }    /*This is a universal reset to remove any default margin or padding from all elements, including the body and the ul.*/
+
+body{
+    font-family: "Work Sans", serif;
+    
+}
+p{
+    color:#2E688C;
+}
+.container.nav{
+    height: 40px;
+    width: 100%;
+    background-color:#94E1F2;
+    padding-top: 0;
+}
+
+.container.nav ul{
+    list-style-type: none;
+    display:flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0;
+    height: 40px;  /*to make align-items work , height needed */
+
+}
+.container.nav li{
+    margin: 0;
+}
+.container.nav a{
+    text-decoration: none;
+    color:#2E688C;
+    padding:5px;
+    font-size: 16px;
+}
+
+.container.nav a:hover {
+    color:#DFF0F2;
+    background-color:#6CBAD9; /* Background color on hover */
+    border-radius: 4px; /* Optional rounded corners */
+  } 
+
+.container.suna{
+    background-color: #DFF0F2;
+    height: 100vh;
+    font-family: "Qwitcher Grypen", serif;
+    color: #6CBAD9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.suna h1 {
+    font-size: 9rem;
+}
+
+.suna h4{
+    font-size: 3rem;
+}
+
+.container.intro{
+    background-color:#DFF0F2 ;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.container.intro p{
+    width:50%;
+    margin:0 auto;
+    padding-top: 30px;
+    font-size: 1.5rem;
+}
+
+.container.intro img{
+    border-radius: 40%;
+}
+
+.container.intro h2{
+    color: #6CBAD9;
+}
+
+.container.skills{
+    background-color:#DFF0F2 ;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.container.skills p{
+    width: 50%;
+    margin:0 auto;
+    padding-top: 30px;
+    font-size: 1.5rem;
+    padding-bottom: 30px;
+
+
+}
+
+.container.skills h2{
+    font-family: "Qwitcher Grypen", serif;
+    color: #6CBAD9;
+    font-size: 4rem;
+    padding: 0;
+}
+
+
+.container.contact{
+    background-color:#DFF0F2 ;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.container.contact p{
+    width: 50%;
+    margin:0 auto;
+    padding-top: 30px;
+    font-size: 1.5rem;
+
+}
+
+.container.contact h2{
+    font-family: "Qwitcher Grypen", serif;
+    color: #6CBAD9;
+    font-size: 4rem;
+    padding: 0;
+}
+
+.container.footer{
+    height: 40px;
+    width: 100%;
+    background-color:#94E1F2;
+    padding-top: 0;
+}
+
+.container.footer{
+    height: 40px;
+    width: 100%;
+    background-color:#94E1F2;
+    padding-bottom: 0;
+}
+
+.container.footer ul{
+    list-style-type: none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 ;
+    height: 40px;  /*to make align-items work , height needed */
+}
+
+.container.footer li{
+    margin: 0;
+}
+.container.footer a{
+    text-decoration: none;
+    color:#2E688C;
+    padding:5px;
+    font-size: 16px;
+}

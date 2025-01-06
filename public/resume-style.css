@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }    /*This is a universal reset to remove any default margin or padding from all elements, including the body and the ul.*/
+
+body{
+    font-family: "Work Sans", serif;
+    
+}
+p{
+    color:#2E688C;
+}
+.container.nav{
+    height: 40px;
+    width: 100%;
+    background-color:#94E1F2;
+    padding-top: 0;
+}
+
+.container.nav ul{
+    list-style-type: none;
+    display:flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0;
+    height: 40px;  /*to make align-items work , height needed */
+
+}
+.container.nav li{
+    margin: 0;
+}
+.container.nav a{
+    text-decoration: none;
+    color:#2E688C;
+    padding:5px;
+    font-size: 16px;
+}
+
+.container.nav a:hover {
+    color:#DFF0F2;
+    background-color:#6CBAD9; /* Background color on hover */
+    border-radius: 4px; /* Optional rounded corners */
+  } 
+
+
+/*summary*/
+
+.container.summary{
+    background-color:#DFF0F2 ;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    padding-top: 100px;
+    width:auto;
+
+}
+
+.container.summary p{
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 30px;
+    font-size: 1rem;
+    width: 60%;
+
+}
+
+.container.summary h2{
+    color: #6CBAD9;
+    font-size: 2rem;
+    margin-left: 100px;
+    padding: 0;
+    margin-bottom: 0;
+
+}
+
+.left{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/*skills*/
+
+.container.skills{
+    background-color: #fffbf0;
+    padding:40px 20px;
+    text-align: center;
+    width: 100%;
+
+}
+.container.skills h2{
+    font-size: 2rem;
+}
+.container.skills .title{
+    color:#6CBAD9;
+    padding-bottom: 30px;
+
+
+}
+/*grid wrapper for skill boxes*/
+
+.skills-boxes{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skills-box ul, .skills-box p  {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color:#2E688C;
+    text-align: left;
+    margin-left: 100px;
+}
+.skills-box h4 {
+    margin-bottom: 10px;
+    color: #94E1F2;
+    text-align: left;
+    margin-left: 100px;
+    font-weight: normal;
+
+}
+/*exp*/
+.container.exp{
+    background-color:#DFF0F2 ;
+    padding:40px 20px;
+    text-align: center;
+    width: 100%;
+    
+
+}
+
+.container.exp .title{
+    font-size: rem;
+    padding-bottom: 30px;
+
+
+}
+.container.exp .title h2 {
+    color: #6CBAD9;
+    font-size: 2rem;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    text-align: center; /* Ensure the h2 is centered */
+}
+
+.container.exp .title p{
+    color: #94E1F2;
+}
+.container.exp .exp-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+
+.container.exp .exp-box {
+    padding: 20px;
+}
+
+.container.exp .exp-box p {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: #2E688C;
+    text-align: left;
+}
+/*edu*/
+.container.edu{
+    background-color: #fffbf0;
+    padding:40px 20px;
+    text-align: center;
+    width: 100%;
+
+}
+.container.edu h2{
+    font-size: 2rem;
+}
+.container.edu .title{
+    color:#6CBAD9;
+    padding-bottom: 30px;
+
+
+}
+
+.edu-boxes{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.edu-boxes ul, .edu-boxes p  {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color:#2E688C;
+    text-align: left;
+    margin-left: 100px;
+}
+.edu-boxes h4 {
+    margin-bottom: 10px;
+    color: #94E1F2;
+    text-align: left;
+    margin-left: 100px;
+    font-weight: normal;
+}
+/*footer*/
+.container.footer{
+    height: 40px;
+    width: 100%;
+    background-color:#94E1F2;
+    padding-top: 0;
+}
+
+.container.footer{
+    height: px;
+    width: 100%;
+    background-color:#94E1F2;
+    padding-bottom: 0;
+}
+
+.container.footer ul{
+    list-style-type: none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 ;
+    height: 40px;  /*to make align-items work , height needed */
+}
+
+.container.footer li{
+    margin: 0;
+}
+.container.footer a{
+    text-decoration: none;
+    color:#2E688C;
+    padding:5px;
+    font-size: 16px;
+}
