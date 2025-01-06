@@ -2,46 +2,47 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }    /*This is a universal reset to remove any default margin or padding from all elements, including the body and the ul.*/
+}
 
-body{
+body {
     font-family: "Work Sans", serif;
-    
 }
-p{
-    color:#2E688C;
-}
-.container.nav{
+
+.container.nav {
     height: 40px;
-    width: 100%;
-    background-color:#94E1F2;
+    width: 100%; /* Ensures the container spans the entire width */
+    background-color: #94E1F2;
     padding-top: 0;
-}
-
-.container.nav ul{
-    list-style-type: none;
-    display:flex;
-    justify-content: start;
+    display: flex; /* Use flexbox for proper alignment */
+    justify-content: flex-start; /* Align content to the left */
     align-items: center;
-    padding: 0;
-    height: 40px;  /*to make align-items work , height needed */
-
+    padding-left: 50px; /* Moves the navigation bar content 50px from the left */
 }
-.container.nav li{
+
+.container.nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; /* Adds spacing between list items */
+    padding: 0;
     margin: 0;
 }
-.container.nav a{
+
+.container.nav li {
+    margin: 0;
+}
+
+.container.nav a {
     text-decoration: none;
-    color:#2E688C;
-    padding:5px;
+    color: #2E688C;
+    padding: 5px;
     font-size: 16px;
 }
 
 .container.nav a:hover {
-    color:#DFF0F2;
-    background-color:#6CBAD9; /* Background color on hover */
-    border-radius: 4px; /* Optional rounded corners */
-  } 
+    color: #DFF0F2;
+    background-color: #6CBAD9;
+    border-radius: 4px;
+}
 
 
 /*summary*/
@@ -115,4 +116,68 @@ p{
     color:#2E688C;
     padding:5px;
     font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    /* Navigation */
+    .container.nav {
+        padding-left: 20px; /* Less padding for smaller screens */
+    }
+
+    .container.nav ul {
+        flex-direction: column;
+        gap: 10px; /* Reduced gap between items */
+        align-items: flex-start;
+    }
+
+    /* Summary Section */
+    .container.summary p {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    .container.summary h2 {
+        font-size: 2.5rem;
+        margin-left: 50px; /* Adjust heading margin */
+    }
+
+    /* Footer */
+    .container.footer ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Navigation */
+    .container.nav {
+        padding-left: 10px; /* Minimal padding on smaller screens */
+    }
+
+    .container.nav ul {
+        flex-direction: column;
+        gap: 8px; /* Further reduced gap between items */
+    }
+
+    .container.nav a {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    /* Summary Section */
+    .container.summary p {
+        width: 90%;
+        font-size: 0.9rem; /* Slightly smaller text for smaller screens */
+    }
+
+    .container.summary h2 {
+        font-size: 2rem; /* Reduced font size for mobile */
+        margin-left: 20px; /* Adjust margin */
+    }
+
+    /* Footer */
+    .container.footer ul {
+        flex-direction: column;
+        gap: 5px;
+    }
 }

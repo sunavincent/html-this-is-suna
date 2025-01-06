@@ -176,3 +176,56 @@ p{
     padding:5px;
     font-size: 16px;
 }
+
+@media (max-width: 768px) {
+    /* Navigation */
+    .container.nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Text Sections */
+    .container.intro p,
+    .container.skills p,
+    .container.contact p {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    /* Large Headings */
+    .container.intro h2,
+    .container.skills h2,
+    .container.contact h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Navigation */
+    .container.nav {
+        padding: 0 10px;
+    }
+
+    .container.nav ul {
+        gap: 10px;
+    }
+
+    .container.nav a {
+        font-size: 14px;
+    }
+
+    /* Text Sections */
+    .container.intro p,
+    .container.skills p,
+    .container.contact p {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+
+    /* Large Headings */
+    .container.intro h2,
+    .container.skills h2,
+    .container.contact h2 {
+        font-size: 2rem;
+    }
+}

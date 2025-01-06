@@ -250,4 +250,65 @@ p{
     color:#2E688C;
     padding:5px;
     font-size: 16px;
+
+}
+/* For tablets and small laptops (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Navigation */
+    .container.nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Text Sections */
+    .container.summary p,
+    .container.skills p,
+    .container.exp p,
+    .container.edu p {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    /* Headings */
+    .container.summary h2,
+    .container.skills h2,
+    .container.exp h2,
+    .container.edu h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Grid Layout for Skill Boxes and Experience Items */
+    .skills-boxes, .container.exp .exp-items, .edu-boxes {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Navigation */
+    .container.nav a {
+        font-size: 14px;
+    }
+
+    /* Text Sections */
+    .container.summary p,
+    .container.skills p,
+    .container.exp p,
+    .container.edu p {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+
+    /* Headings */
+    .container.summary h2,
+    .container.skills h2,
+    .container.exp h2,
+    .container.edu h2 {
+        font-size: 2rem;
+    }
+
+    /* Grid Layout Adjustments */
+    .skills-boxes, .container.exp .exp-items, .edu-boxes {
+        grid-template-columns: 1fr;
+    }
 }
