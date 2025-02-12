@@ -11,38 +11,40 @@ body{
 p{
     color:#2E688C;
 }
-.container.nav{
+
+.container.nav {
     height: 40px;
     width: 100%;
-    background-color:#94E1F2;
+    background-color: #94E1F2;
     padding-top: 0;
 }
 
-.container.nav ul{
+.container.nav ul {
     list-style-type: none;
-    display:flex;
+    display: flex;
     justify-content: start;
     align-items: center;
     padding: 0;
-    height: 40px;  /*to make align-items work , height needed */
-
+    height: 40px;
+    flex-wrap: wrap; /* Added wrapping for smaller screens */
 }
-.container.nav li{
+
+.container.nav li {
     margin: 0;
 }
-.container.nav a{
+
+.container.nav a {
     text-decoration: none;
-    color:#2E688C;
-    padding:5px;
+    color: #2E688C;
+    padding: 5px;
     font-size: 16px;
 }
 
 .container.nav a:hover {
-    color:#DFF0F2;
-    background-color:#6CBAD9; /* Background color on hover */
-    border-radius: 4px; /* Optional rounded corners */
-  } 
-
+    color: #DFF0F2;
+    background-color: #6CBAD9;
+    border-radius: 4px;
+}
 
 /*summary*/
 
