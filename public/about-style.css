@@ -1,3 +1,4 @@
+/* General Reset and Styling */
 * {
     margin: 0;
     padding: 0;
@@ -11,8 +12,7 @@ body {
 p {
     color: #2E688C;
 }
-
-/* Navigation */
+/* Navigation Section */
 .container.nav {
     height: 40px;
     width: 100%;
@@ -23,15 +23,16 @@ p {
 .container.nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start; /* Align items to the left */
     align-items: center;
     padding: 0;
     height: 40px;
-    flex-wrap: wrap;
+    margin: 0; /* Ensure there's no extra margin pushing the list */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
 }
 
 .container.nav li {
-    margin: 0;
+    margin: 0; /* Remove any margin from list items */
 }
 
 .container.nav a {
@@ -47,20 +48,22 @@ p {
     border-radius: 4px;
 }
 
+
 /* Summary Section */
 .container.summary {
     background-color: #DFF0F2;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     padding-bottom: 10px;
     padding-top: 100px;
-    width: auto;
+    width: 100%;
 }
 
 .container.summary p {
     margin-left: 100px;
     margin-right: 100px;
+    margin-bottom: 30px;
     padding-top: 30px;
     font-size: 1rem;
     width: 60%;
@@ -82,7 +85,7 @@ p {
     margin: 0 auto;
 }
 
-/* Footer */
+/* Footer Section */
 .container.footer {
     height: 40px;
     width: 100%;
@@ -110,13 +113,11 @@ p {
     font-size: 16px;
 }
 
-/* Mobile/Tablet Responsiveness */
+/* For devices with max-width of 768px and below */
 @media (max-width: 768px) {
-    .container.nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
+
+    /* Summary Section */
     .container.summary p {
         width: 80%;
         font-size: 1rem;
@@ -129,19 +130,58 @@ p {
     .left {
         grid-template-columns: 1fr;
     }
+
+
 }
 
-@media (max-width: 480px) {
-    .container.nav a {
-        font-size: 14px;
+/* For small screens max-width 468px */
+@media (max-width: 468px) {
+        /* Navigation */
+        .container.nav {
+            height: auto; /* Remove fixed height, allow content to define the height */
+        }
+    
+        .container.nav ul {
+            flex-direction: column; /* Stack items vertically */
+            align-items: flex-start; /* Align items to the left */
+            height: auto; /* Let the height expand based on content */
+            padding: 10px 0; /* Add padding to the top and bottom for spacing */
+        }
+    
+        .container.nav li {
+            width: 100%; /* Ensure each nav item takes up full width */
+            text-align: left; /* Align text to the left */
+            padding-left: 10px; /* Add left padding for alignment */
+        }
+    
+        .container.nav a {
+            font-size: 14px; /* Reduce font size for smaller screens */
+            display: block; /* Make each link take up the full width of the li */
+        }
+
+    /* Summary Section */
+    .container.summary {
+        padding-top: 80px; /* Less padding for small screens */
     }
 
     .container.summary p {
-        width: 90%;
-        font-size: 0.9rem;
+        width: 90%; /* Adjust width for smaller screens */
+        font-size: 0.9rem; /* Make font slightly smaller */
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .container.summary h2 {
-        font-size: 2rem;
+        font-size: 1.8rem; /* Adjust heading size */
+        margin-left: 10px;
+        margin-right: 10px;
     }
+
+    .left {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+
+
 }

@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +13,7 @@ p {
     color: #2E688C;
 }
 
+/* Navigation Section */
 .container.nav {
     height: 40px;
     width: 100%;
@@ -22,15 +24,16 @@ p {
 .container.nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Align items to the left */
     align-items: center;
     padding: 0;
     height: 40px;
-    flex-wrap: wrap; /* Added wrapping for smaller screens */
+    margin: 0; /* Ensure there's no extra margin pushing the list */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
 }
 
 .container.nav li {
-    margin: 0;
+    margin: 0; /* Remove any margin from list items */
 }
 
 .container.nav a {
@@ -46,39 +49,34 @@ p {
     border-radius: 4px;
 }
 
+
 /* Summary Section */
 .container.summary {
     background-color: #DFF0F2;
-    min-height: 100vh; /* Ensure it takes full height */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     padding-bottom: 10px;
     padding-top: 100px;
     width: 100%;
+    justify-content: center; /* Vertically centers content */
+    align-items: center;     /* Horizontally centers content */
+    margin: 0 auto;          /* Centers the container horizontally */
 }
 
 .container.summary p {
-    margin-left: 100px;
-    margin-right: 100px;
     padding-top: 30px;
     font-size: 1rem;
-    width: 60%;
+    width: 80%; /* Ensure text doesn't stretch too wide */
+    max-width: 800px; /* Keep text width consistent */
 }
 
 .container.summary h2 {
     color: #6CBAD9;
     font-size: 2rem;
-    margin-left: 100px;
     padding: 0;
     margin-bottom: 0;
-}
-
-.left {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    text-align: left; /* left heading */
 }
 
 /* Skills Section */
@@ -87,24 +85,49 @@ p {
     padding: 40px 20px;
     text-align: center;
     width: 100%;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    flex-direction: column;  /* Stack content vertically */
+    align-items: center;     /* Center content vertically */
 }
 
 .container.skills h2 {
     font-size: 2rem;
+    color: #6CBAD9;
+    margin-bottom: 30px; /* Space below the heading */
+    width: 100%; /* Ensure the heading takes up full width */
+    display: flex;
+    justify-content: center; /* Ensure it is centered horizontally */
+    text-align: center; /* Center the heading text */
 }
 
 .container.skills .title {
     color: #6CBAD9;
     padding-bottom: 30px;
+    text-align: center; /* Center title text */
+    width: 100%; /* Ensure it takes up full width */
+    display: flex;
+    justify-content: center; /* Center title horizontally */
 }
 
 /* Grid Wrapper for Skill Boxes */
 .skills-boxes {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
     grid-gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 800px;  /* Keep the grid width consistent */
+    margin: 0 auto;    /* Center the grid */
+}
+
+.skills-box {
+    padding: 20px;
+    background-color: #fffbf0;
+}
+
+.skills-box h4 {
+    color: #94E1F2;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 .skills-box ul,
@@ -114,15 +137,10 @@ p {
     list-style-type: none;
     color: #2E688C;
     text-align: left;
-    margin-left: 100px;
 }
 
-.skills-box h4 {
-    margin-bottom: 10px;
-    color: #94E1F2;
-    text-align: left;
-    margin-left: 100px;
-    font-weight: normal;
+.skills-box ul li {
+    margin-bottom: 5px;
 }
 
 /* Experience Section */
@@ -134,20 +152,18 @@ p {
 }
 
 .container.exp .title {
-    font-size: rem;
     padding-bottom: 30px;
 }
 
 .container.exp .title h2 {
     color: #6CBAD9;
     font-size: 2rem;
-    margin: 0 auto;
-    padding-bottom: 10px;
     text-align: center;
 }
 
 .container.exp .title p {
     color: #94E1F2;
+    padding-top: 20px;
 }
 
 .container.exp .exp-items {
@@ -202,14 +218,13 @@ p {
     list-style-type: none;
     color: #2E688C;
     text-align: left;
-    margin-left: 100px;
+    margin-left: 0;
 }
 
 .edu-boxes h4 {
     margin-bottom: 10px;
     color: #94E1F2;
     text-align: left;
-    margin-left: 100px;
     font-weight: normal;
 }
 
@@ -243,19 +258,16 @@ p {
 
 /* For tablets and small laptops (max-width: 768px) */
 @media (max-width: 768px) {
-    /* Navigation */
-    .container.nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
+   
     /* Text Sections */
     .container.summary p,
     .container.skills p,
     .container.exp p,
     .container.edu p {
-        width: 80%;
+        width: 90%; /* Adjust width */
         font-size: 1rem;
+        margin-left: auto; /* Ensure left margin is auto */
+        margin-right: auto; /* Ensure right margin is auto */
     }
 
     /* Headings */
@@ -263,20 +275,55 @@ p {
     .container.skills h2,
     .container.exp h2,
     .container.edu h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        text-align: center; /* Center headings */
     }
 
     /* Grid Layout for Skill Boxes and Experience Items */
-    .skills-boxes, .container.exp .exp-items, .edu-boxes {
+    .skills-boxes,
+    .container.exp .exp-items,
+    .edu-boxes {
         grid-template-columns: 1fr;
+        max-width: 100%; /* Make grids full-width */
+        margin: 0 auto;
+    }
+
+    /* Ensure the .container.summary has equal padding on left and right */
+    .container.summary {
+        padding-left: 20px; /* Add padding to the left */
+        padding-right: 20px; /* Ensure it has the same padding on the right */
+    }
+
+    /* If the right margin is still larger, reset margin/padding for child elements */
+    .container.summary > * {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
-/* For mobile devices (max-width: 480px) */
-@media (max-width: 480px) {
-    /* Navigation */
+/* For mobile devices (max-width: 468px) */
+@media (max-width: 468px) {
+     /* Navigation */
+     .container.nav {
+        height: auto; /* Remove fixed height, allow content to define the height */
+    }
+
+    .container.nav ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+        height: auto; /* Let the height expand based on content */
+        padding: 10px 0; /* Add padding to the top and bottom for spacing */
+    }
+
+    .container.nav li {
+        width: 100%; /* Ensure each nav item takes up full width */
+        text-align: left; /* Align text to the left */
+        padding-left: 10px; /* Add left padding for alignment */
+    }
+
     .container.nav a {
-        font-size: 14px;
+        font-size: 14px; /* Reduce font size for smaller screens */
+        display: block; /* Make each link take up the full width of the li */
     }
 
     /* Text Sections */
@@ -284,7 +331,7 @@ p {
     .container.skills p,
     .container.exp p,
     .container.edu p {
-        width: 90%;
+        width: 90%; /* Ensure content is centered */
         font-size: 0.9rem;
     }
 
@@ -294,10 +341,13 @@ p {
     .container.exp h2,
     .container.edu h2 {
         font-size: 2rem;
+        text-align: center; /* Center headings */
     }
 
     /* Grid Layout Adjustments */
-    .skills-boxes, .container.exp .exp-items, .edu-boxes {
+    .skills-boxes,
+    .container.exp .exp-items,
+    .edu-boxes {
         grid-template-columns: 1fr;
     }
 }
